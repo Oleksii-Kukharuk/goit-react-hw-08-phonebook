@@ -1,0 +1,37 @@
+.itemList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.item {
+  list-style: none;
+}
+.link {
+  min-width: 100px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 15px;
+}
+.link:active {
+  box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.link:hover {
+  background: #03e9f4;
+  color: #fff;
+}
+.link:nth-child(1) {
+  filter: hue-rotate(180deg);
+}
+
+

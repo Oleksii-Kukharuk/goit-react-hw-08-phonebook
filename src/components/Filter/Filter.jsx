@@ -1,29 +1,24 @@
-import { nanoid } from 'nanoid';
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { FilterInput, FilterP } from './Filter.styled';
-import { changeFilter } from 'redux/FilterSlice';
+import PropTypes from 'prop-types';
 
-const filterId = nanoid();
-export const Filter = () => {
-  const filtredText = useSelector(state => state.filter.filter);
+import css from './Filter.module.css';
 
-  const dispatch = useDispatch();
-
-  const onChangeFilter = event => {
-    dispatch(changeFilter(event.currentTarget.value));
-  };
-
+const Filter = ({ filter }) => {
   return (
-    <div>
-      <FilterP>Find contacts by name</FilterP>
-      <label htmlFor={filterId}></label>
-      <FilterInput
-        id={filterId}
+    <>
+      <p className={css.title}>Find contacts by name</p>
+      <input
+        className={css.input}
         type="text"
-        value={filtredText}
-        onChange={onChangeFilter}
-      ></FilterInput>
-    </div>
+        name="filter"
+        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        onChange={filter}
+      />
+    </>
   );
 };
+
+Filter.prototype = {
+  filter: PropTypes.func.isRequired,
+};
+export default Filter;

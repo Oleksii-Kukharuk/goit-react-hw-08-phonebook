@@ -1,0 +1,63 @@
+.userlist {
+  display: flex;
+
+  margin-left: auto;
+  margin-right: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  gap: 20px;
+}
+
+.button {
+  display: inline-block;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;}
+  
+.button:not(:last-child) {
+      margin-right: 10px;
+    }
+  
+.button:hover {
+      background-color: darkgreen;
+    }
+
+.button:active {
+      background-color: darkgreen;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+span {
+  position: absolute;
+  display: block;
+}
+
+.text {
+  margin: 0;
+  min-width: 100px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+}
+.name {
+  font-family: Vampiro One;
+  display: inline-block;
+  position: relative;
+  animation: neon6 1.5s ease-in-out infinite alternate;
+}
+
